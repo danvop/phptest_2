@@ -1,4 +1,5 @@
 <?
+	define('PATH_LOG', 'path.log');
 	include 'inc/headers.inc.php';
 	include 'inc/cookie.inc.php';
 ?>
