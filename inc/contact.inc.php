@@ -1,6 +1,19 @@
+<?php
+$result = ' ';
+if($_SERVER['REQUEST_METHOD']=='POST'){
+	$subj = trim(strip_tags($_POST['subject']));
+	$body = trim(strip_tags($_POST['subject']));
+	if(mail('admin@localhost', $subj, $body))
+		$result = 'Письмо передано почтовому серверу';
+	else
+		$result = 'произошла ошибка при отправке письма';
+}
+?>
+
 <h3>Адрес</h3>
 <p>123456 Москва, Малый Американский переулок 21</p>
 <h3>Задайте вопрос</h3>
+<p><?= $result?></p>
 <form action='<?= $_SERVER['REQUEST_URI']?>' method='post'>
 	<label>Тема письма: </label><br />
 	<input name='subject' type='text' size="50"/><br />
