@@ -1,5 +1,6 @@
 <?
 	define('PATH_LOG', 'path.log');
+	include 'inc/log.inc.php';
 	include 'inc/headers.inc.php';
 	include 'inc/cookie.inc.php';
 ?>
@@ -51,6 +52,7 @@
 				<li><a href='test/index.php'>Он-лайн тест</a></li>
 				<li><a href='index.php?id=gbook'>Гостевая книга</a></li>
 				<li><a href='eshop/catalog.php'>Магазин</a></li>
+				<li><a href='index.php?id=log'>Журнал посещений</a></li>
 			</ul>
 			<!-- Навигация -->
 		</div>
