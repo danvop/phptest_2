@@ -4,15 +4,17 @@ define('DB_HOST',       'localhost');
 define('DB_LOGIN',		'root');
 define('DB_PASSWORD',	'');
 define('DB_NAME',		'gbook');
-if($link = mysqli_connect(DB_HOST, DB_LOGIN, DB_PASSWORD, DB_NAME)){
+if($link = mysqli_connect(DB_HOST, DB_LOGIN,
+                          DB_PASSWORD, DB_NAME)){
  // echo mysqli_connect_errno();
   //echo '<br>';
   echo mysqli_connect_error();
 }
 
 function clearStr($data){
-  global $link; //need for using in function
-  return mysqli_real_escape_string($link, trim(strip_tags($data)));
+  global $link; //need for avaliable $link in function
+  return mysqli_real_escape_string($link,
+                                   trim(strip_tags($data)));
 }
 
 /* Сохранение записи в БД */
@@ -48,7 +50,8 @@ if(isset($_GET['del'])){
     $sql = "DELETE FROM msgs WHERE id=$del";
     mysqli_query($link, $sql) or
       die(mysqli_error($link));
-    header('Location: '.$_SERVER['SCRIPT_NAME'].'?id=gbook');//return to index.php?id=gbook
+    header('Location: '.$_SERVER['SCRIPT_NAME'].
+           '?id=gbook');//return to index.php?id=gbook
     exit;
   }
 }
