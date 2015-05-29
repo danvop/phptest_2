@@ -3,6 +3,7 @@
 	include 'inc/log.inc.php';
 	include 'inc/headers.inc.php';
 	include 'inc/cookie.inc.php';
+    ob_start(); //prevent headers error when gbook.inc form sends
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
