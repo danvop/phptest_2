@@ -1,8 +1,10 @@
 <?
 require "secure/session.inc.php";
 ?>
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Форма добавления товара в каталог</title>
 </head>
 <body>

@@ -1,10 +1,12 @@
 <?php
 	// подключение библиотек
 	require "inc/lib.inc.php";
-	require "inc/db.inc.php";
+	require "inc/config.inc.php";
 ?>
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Корзина пользователя</title>
 </head>
 <body>

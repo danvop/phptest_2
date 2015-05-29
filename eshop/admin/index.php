@@ -2,11 +2,11 @@
 require_once "secure/session.inc.php";
 require_once "secure/secure.inc.php";
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <html>
 <head>
 	<title>Админка</title>
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta charset="utf-8">
 </head>
 <body>
 	<h1>Администрирование магазина</h1>

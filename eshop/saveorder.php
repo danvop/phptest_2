@@ -1,9 +1,11 @@
 <?php
 	require "inc/lib.inc.php";
-	require "inc/db.inc.php";
+	require "inc/config.inc.php";
 ?>
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Сохранение данных заказа</title>
 </head>
 <body>

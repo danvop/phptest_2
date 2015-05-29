@@ -1,11 +1,13 @@
 <?php
 	require "secure/session.inc.php";
 	require "../inc/lib.inc.php";
-	require "../inc/db.inc.php";
+	require "../inc/config.inc.php";
 ?>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Поступившие заказы</title>
+	<meta charset="utf-8">
 </head>
 <body>
 <h1>Поступившие заказы:</h1>
