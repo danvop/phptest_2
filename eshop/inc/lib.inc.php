@@ -4,6 +4,9 @@ function clearStr($data){
   return mysqli_real_escape_string($link,
                               trim(strip_tags($data)));
 }
+function clearInt($data){
+  return abs((int)$data);
+}
 function addItemToCatalog($title, $author, $pubyear,
                           $price){
   $sql = 'INSERT INTO catalog (title, author, pubyear,
