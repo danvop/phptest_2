@@ -13,3 +13,14 @@ function addItemToCatalog($title, $author, $pubyear,
   mysqli_stmt_close($stmt);
   return true;
 }
+
+function selectAllItems(){
+  global $link;
+  $sql = 'SELECT id, title, author, pubyear, price 
+  FROM catalog';
+  if(!$result = mysqli_query($link, $sql)) 
+    return false;
+  $items = mysqli_fetch_all($result, MYSQLI_ASSOC); 
+  mysqli_free_result($result);
+  return $items;
+}
