@@ -29,11 +29,12 @@ foreach($goods as $item){
     <td><?= $item['author']?></td>
     <td><?= $item['pubyear']?></td>
     <td><?= $item['price']?></td>
-    <td><a href="add2basket.php&id=<?= $item['id'] ?>">
+    <td><a href="add2basket.php?id=<?= $item['id'] ?>">
       В корзину</a></td>
   </tr>
 <?php }
 ?>
 </table>
+
 </body>
 </html>
