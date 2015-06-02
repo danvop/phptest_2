@@ -80,3 +80,24 @@ function deleteItemFromBasket($id){
   unset($basket[$id]);
   saveBasket();
 }
+function saveOrder($datetime){
+  global $link, $basket;
+  $goods = myBasket();
+  $stmt = mysqli_stmt_init($link);
+  $sql = 'INSERT INTO orders ( title, author, 
+          pubyear, price, quantity, orderid, datetime)
+          VALUES (?, ?, ?, ?, ?, ?, ?)';
+  if (!mysqli_stmt_prepare($stmt, $sql))
+    return false;
+  foreach($goods as $item){
+    mysqli_stmt_bind_param($stmt, "ssiiisi", 
+                           $item['title'], $item['author'],
+                           $item['pubyear'], $item['price'],
+                           $item['quantity'], $basket['orderid'],
+                           $datetime);
+    mysqli_stmt_execute($stmt);
+  } 
+  mysqli_stmt_close($stmt); 
+  setcookie('basket','',1);
+  return true;
+}
