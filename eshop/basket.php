@@ -14,12 +14,13 @@
 <p>
 <?php
 if(!$count){
-  echo 'Корзина пуста! Вернитесь в ';
+  echo "Корзина пуста! Вернитесь в <a href='catalog.php'>каталог</a>";
+  exit;
 }else{
-  echo 'Вернуться в ';
+  echo "Вернуться в <a href='catalog.php'>каталог</a>";
 }
 ?>
-<a href="catalog.php">каталог</a></p>
+</p>
 
 <table border="1" cellpadding="5" cellspacing="0" width="100%">
 <tr>
