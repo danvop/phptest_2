@@ -32,11 +32,11 @@ if(!$count){
 	<th>Удалить</th>
 </tr>
 <?php
-$arr = myBasket();
+$goods = myBasket();
 //print_r($arr);
 $i = 1;
 $sum = 0;
-foreach($arr as $item){
+foreach($goods as $item){
 ?>
   <tr>
     <td><?= $i++ ?></td>
@@ -49,7 +49,7 @@ foreach($arr as $item){
       Удалить</a></td>
   </tr>
 <?php
-$sum = $sum + $item['price'] * $item['quantity'];
+$sum += $item['price'] * $item['quantity'];
 }
 
 ?>
