@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   $address = clearStr($_POST["address"]);
   $dt = time();
   $oid = $basket["orderid"];
-  $order = "$name|$email|$phone|$address|$dt|$oid";
+  $order = "$name|$email|$phone|$address|$dt|$oid\n";
   file_put_contents("admin/".ORDERS_LOG, $order, FILE_APPEND);
 
   saveOrder($dt);
