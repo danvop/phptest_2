@@ -5,7 +5,7 @@ define('DB_PASSWORD',  '');
 define('DB_NAME',      'eshop');
 define('ORDERS_LOG',   'orders.log');
 //connect with database
-if($link = mysqli_connect(DB_HOST, DB_LOGIN,
+if(!$link = mysqli_connect(DB_HOST, DB_LOGIN,
                           DB_PASSWORD, DB_NAME)){
   // echo mysqli_connect_errno();
   //echo '<br>';
